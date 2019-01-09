@@ -1,3 +1,54 @@
-/* font-family: 'Titillium Web', sans-serif; */
+body{
+    background-image: url(../images/space.jpeg);
+    background-size: auto;
+}
+
+table {
+    border-radius: 20px;
+    border: 10px double black;
+    padding-bottom: 15px;
+    box-shadow: 10px 10px 5px grey;
+    font-family: 'Titillium Web', sans-serif;
+    background-image: url(../images/background);
+    background-size: contain;
+}
+
+button {
+    background-image: url(../images/button.gif);
+    background-size: contain;
+    border: 2px solid black;
+    color: white;
+    font-weight: bold;
+    padding: 22px 30px;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    margin: 5px 5px;
+    border-radius: 50px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover {
+
+}
+
+button:active {
+
+}
+
+p {
+    border: 5px solid black;
+    padding-right: 15px;
+    color: white;
+    font-size: 30px;
+}
+
+#zero {
+  padding: 30px 90px;
+}
+
+
+
+
 
 
