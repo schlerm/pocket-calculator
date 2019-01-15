@@ -112,6 +112,8 @@ function equals(input){
 //add answer function
 //add displayString functionality
 //add comma notation
+//add percent functionality
+//add negate functionality
 
 
 
