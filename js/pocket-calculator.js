@@ -111,6 +111,7 @@ function equals(input){
 
 //add answer function
 //add displayString functionality
+//add comma notation
 
 
 
