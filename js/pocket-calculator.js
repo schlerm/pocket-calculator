@@ -1,28 +1,29 @@
 let symbol = false
 let expression = ""
+let displayExpression = ""
 
 function operations(operation){
     if(operation == '+' && symbol == true){
         expression+='+';
-        document.getElementById("display").innerHTML=expression;
+        document.getElementById("display").innerHTML='0';
         symbol=false;
     }
    
     if(operation == '-' && symbol == true){
         expression+='-';
-        document.getElementById("display").innerHTML=expression;
+        document.getElementById("display").innerHTML='0';
         symbol=false;
     }
 
-    if(operation == '-' && symbol == true){
+    if(operation == 'x' && symbol == true){
         expression+='*';
-        document.getElementById("display").innerHTML=expression;
+        document.getElementById("display").innerHTML='0';
         symbol=false;
     }
 
     if(operation == '/' && symbol == true){
         expression+='/';
-        document.getElementById("display").innerHTML=expression;
+        document.getElementById("display").innerHTML='0';
         symbol=false;
     }
 
@@ -30,10 +31,6 @@ function operations(operation){
         expression+='.';
         document.getElementById("display").innerHTML=expression;
         symbol=false;
-    }
-
-    if(operation == '%' && symbol == true){
-        document.getElementById("display").innerHTML=expression;
     }
 }
 
@@ -90,7 +87,30 @@ function numbers(number){
     }
 } 
 
-function clear(){
-    expression='0';
-    document.getElementById("display").innerHTML=expression;
+function erase(){
+    expression='';
+    document.getElementById("display").innerHTML='0';
+    symbol=true;
 }
+
+function equals(input){
+    let evaluation = eval(expression);
+    if(input == '='){
+        if(evaluation==Infinity){
+            document.getElementById("display").innerHTML="Error!";
+        }
+        else if(evaluation>=1000000000){
+            let exponent=finalExpression.toString().length-1;
+            document.getElementById("display").innerHTML=evaluation/(10**(exponent))+'e'+exponent;
+        }
+        else{
+            document.getElementById("display").innerHTML=evaluation.toLocaleString();
+        }        
+    }
+}
+
+//add answer function
+//add displayString functionality
+
+
+
