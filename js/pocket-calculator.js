@@ -100,7 +100,7 @@ function equals(input){
             document.getElementById("display").innerHTML="Error!";
         }
         else if(evaluation>=1000000000){
-            let exponent=finalExpression.toString().length-1;
+            let exponent=evaluation.toString().length-1;
             document.getElementById("display").innerHTML=evaluation/(10**(exponent))+'e'+exponent;
         }
         else{
