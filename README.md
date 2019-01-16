@@ -96,11 +96,27 @@ Nice-to-haves is a term in software development that refer to features of an app
 
 Building a robust application requires a lot of testing. Here's a push in the right direction, but do not consider these test cases alone sufficient to validate your application.
 
-Coming soon...
+* Enter `123456789`, and your calculator should display `123,456,789`.
+* Enter `999999999 + 1`, and your calculator should display `1e9`.
+* Enter `7` and then press `AC`, and your calculator should display `0`.
+* Enter `9` and then `+/-`, and your calculator should display `-9`.
+* Enter `7` and then `+/-` twice, and your calculator should display `7`.
+* Enter `75` and then `%` twice, and your calculator should display `0.0075`.
+* Enter `21 / 7`, and your calculator should display `3`.
+* Enter `7 x 3`, and your calculator should display `21`.
+* Enter `12 + 9`, and your calculator should display `21`.
+* Enter `30 - 9`, and your calculator should display `21`.
+* Enter `7 + 8 x 2`, and your calculator should display `23`.
+* Enter `5 + 10 / 2`, and your calculator should display `10`.
+* Enter `1.2.3.4`, and your calculator should display `1.234`.
+* Enter `1 / 0`, and your calculator should display `Error` (or something similar).
+* Enter `5 + - 3`, and your calculator should display `2`.
+* Enter `8 + x 2`, and your calculator should display `16`.
+* Enter `8 + / 4`, and your calculator should display `2`.
 
 ## Deadline
 
-Your Canvas submission is due at or before 11:59pm on TBD (pending midterm schedule).
+Your Canvas submission is due at or before 11:59pm on Januar 21, 2019.
 
 ### Submission Requirements
 

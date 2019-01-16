@@ -44,13 +44,11 @@ p {
     padding-right: 15px;
     color: white;
     font-size: 30px;
-    width: 570px;
+    width: 550px;
     overflow: hidden;
 }
 
-#zero {
-  padding: 30px 90px;
-}
+
 h1{
     text-align: center;
     color: white;
