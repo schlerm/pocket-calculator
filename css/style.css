@@ -44,6 +44,8 @@ p {
     padding-right: 15px;
     color: white;
     font-size: 30px;
+    width: 570px;
+    overflow: hidden;
 }
 
 #zero {
@@ -55,10 +57,6 @@ h1{
     font-family: 'Titillium Web', sans-serif;
 }
 
-p{
-    width: 570px;
-    overflow: hidden;
-}
 
 
 
