@@ -2,6 +2,7 @@ let symbol = false
 let expression = ''
 let displayExpression = ''
 let answer = ''
+let parts = ''
 
 //The displayExpression variable combined with the expression variable allows for the calculator to clear the screen
 //afer you enter an operation or compute an answer, or evaluation.
@@ -34,7 +35,6 @@ function operations(operation){
 }
 
 function numbers(number){
-    //does not display until a number is entered afterwards
     if(number == '.'){
         expression+='.';
         displayExpression+='.';
@@ -126,6 +126,12 @@ function percent(){
     displayExpression+='%';
     document.getElementById("display").innerHTML=displayExpression;
     symbol=false;
+}
+
+function negate(){
+    expression+='*(-1)';
+    displayExpression=-displayExpression;
+    document.getElementById("display").innerHTML=displayExpression.toLocaleString('en');
 }
 
 function equals(input){
