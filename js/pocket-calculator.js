@@ -31,16 +31,16 @@ function operations(operation){
         document.getElementById("display").innerHTML='0';
         symbol=false;
     }
-//does not display until a number is entered afterwards
-    if(operation == '.' && symbol == true){
-        expression+='.';
-        displayExpression+='.';
-        document.getElementById("display").innerHTML=Number(displayExpression).toLocaleString('en');
-        symbol=false;
-    }
 }
 
 function numbers(number){
+    //does not display until a number is entered afterwards
+    if(number == '.'){
+        expression+='.';
+        displayExpression+='.';
+        document.getElementById("display").innerHTML=Number(displayExpression).toLocaleString('en');
+        symbol=true;
+    }
     if(number == '0'){
         expression+='0';
         displayExpression+='0';
@@ -114,13 +114,17 @@ function ans(){
     displayExpression+=answer
     expression+=answer
     document.getElementById("display").innerHTML=Number(displayExpression).toLocaleString('en');
+    console.log(answer)
 }
 
-//percent symbol does not display but does function as intended
+function plusAndMinus(){
+    expression+=''
+}
+
 function percent(){
     expression+='/100';
     displayExpression+='%';
-    document.getElementById("display".innerHTML=displayExpression);
+    document.getElementById("display").innerHTML=displayExpression;
     symbol=false;
 }
 
@@ -139,7 +143,7 @@ function equals(input){
             answer=evaluation;
         }
         else{
-            document.getElementById("display").innerHTML=evaluation.toLocaleString();
+            document.getElementById("display").innerHTML=evaluation.toLocaleString('en');
             displayExpression='';
             expression='';
             answer=evaluation;
@@ -151,11 +155,9 @@ function equals(input){
             document.getElementById("display").innerHTML="Error!";            
         }
     }
+    console.log(evaluation);
 }
 
-//add answer function
-//add displayString functionality
-//add percent functionality
 //add negate functionality
 
 
