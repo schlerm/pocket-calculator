@@ -167,5 +167,3 @@ function equals(input){
     }
     console.log(evaluation);
 }
-
-//make percent evaluate on button press
