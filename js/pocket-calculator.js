@@ -116,10 +116,6 @@ function ans(){
     console.log(answer)
 }
 
-function plusAndMinus(){
-    expression+=''
-}
-
 function percent(){
     if (expression==''){
         expression=answer
