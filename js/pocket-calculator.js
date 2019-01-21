@@ -2,7 +2,6 @@ let symbol = false
 let expression = ''
 let displayExpression = ''
 let answer = ''
-let parts = ''
 
 //The displayExpression variable combined with the expression variable allows for the calculator to clear the screen
 //afer you enter an operation or compute an answer, or evaluation.
@@ -122,10 +121,15 @@ function plusAndMinus(){
 }
 
 function percent(){
-    expression+='/100';
-    displayExpression+='%';
-    document.getElementById("display").innerHTML=displayExpression;
-    symbol=false;
+    if (expression==''){
+        expression=answer
+        expression+='/100';
+        equals('=');
+    }
+    else{
+        expression+='/100';
+        equals('=');
+    }
 }
 
 function negate(){
@@ -149,7 +153,7 @@ function equals(input){
             answer=evaluation;
         }
         else{
-            document.getElementById("display").innerHTML=evaluation.toLocaleString('en');
+            document.getElementById("display").innerHTML=evaluation.toLocaleString('en', {maximumFractionDigits: 6});
             displayExpression='';
             expression='';
             answer=evaluation;
@@ -164,7 +168,4 @@ function equals(input){
     console.log(evaluation);
 }
 
-//add negate functionality
-
-
-
+//make percent evaluate on button press
