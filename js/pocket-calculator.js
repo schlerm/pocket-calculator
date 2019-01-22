@@ -163,7 +163,7 @@ function equals(input){
     let evaluation = eval(expression);
     if(input == '='){
         if(evaluation==Infinity){
-            document.getElementById("display").innerHTML="W̺̥̠͖ͦͤ̇ͪh͕̞̳̟̫͌̎";
+            document.getElementById("display").innerHTML="W͟͢h̵͘y̕͜?̨͠";
         }
         else if(evaluation>=1000000000 || evaluation<=-1000000000){
             let exponent=evaluation.toString().length-1;
